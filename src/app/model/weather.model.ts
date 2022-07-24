@@ -1,4 +1,4 @@
-export interface Root {
+export interface WeatherData {
     coord: Coord
     weather: Weather[]
     base: string
@@ -29,7 +29,7 @@ export interface Root {
   export interface Main {
     temp: number
     feelslike: number
-    tempmin: number
+    temp_min: number
     temp_max: number
     pressure: number
     humidity: number
