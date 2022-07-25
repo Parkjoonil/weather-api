@@ -1,3 +1,9 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="search city" name="city" [(ngModel)]="cityName">
+  </form>
+</div>
+
 <div class="container" *ngIf="weatherData">
   <div class="upper-data">
     <img src="../assets/hot.jpg" *ngIf="weatherData.main.temp > 15">
@@ -36,7 +42,7 @@
           <span>humidity</span>
         </div>
         <div class="info-block-value">
-          {{ weatherData.main.humidity }}
+          {{ weatherData.main.humidity }}%
         </div>
       </div>
       <div class="info-block">
@@ -45,7 +51,7 @@
           <span>wind</span>
         </div>
         <div class="info-block-value">
-          {{ weatherData.wind.speed }}
+          {{ weatherData.wind.speed }} km/h
         </div>
     </div>
 
